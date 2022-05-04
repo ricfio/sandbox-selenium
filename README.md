@@ -73,9 +73,9 @@ You can run Google Chrome also inside a docker container (debian based) on Windo
 
 Further details to install VcXsrv:  
 
-- [Install an X-server to display UI from the linux subsystem (WSL2)](https://docs.cypress.io/guides/getting-started/installing-cypress#Windows-Subsystem-for-Linux)
+- [Install an X-Server to display UI from the linux subsystem (WSL2)](https://docs.cypress.io/guides/getting-started/installing-cypress#Windows-Subsystem-for-Linux)
 
-## Run Google Chrome from the docker container using the X-Server running on the docker host
+## Run Google Chrome in docker using the X-Server running on docker host
 
 ```bash
 google-chrome-stable --no-sandbox --display=host.docker.internal:0.0 --disable-dev-shm-usage
