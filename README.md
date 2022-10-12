@@ -29,7 +29,7 @@ The project include the .devcontainer folder to automate the docker build and de
 
 ## Appendix
 
-## Build the docker image
+### Build the docker image
 
 The docker image can be manually built as follow:  
 
@@ -41,7 +41,7 @@ docker build -t ricfio/python-selenium:3.10 .
 The project docker image was built as a customization from:  
 `mcr.microsoft.com/vscode/devcontainers/python:0-3.10-bullseye`
 
-## Install Python packages
+### Install Python packages
 
 This project uses some python packages that can be installed with pip:  
 
@@ -50,7 +50,7 @@ pip install selenium
 pip install webdriver-manager
 ```
 
-## Install Google Chrome
+### Install Google Chrome
 
 The Google Chrome browser was installed in the docker image (linux debian based) as follow:  
 
@@ -63,7 +63,7 @@ sudo apt clean
 google-chrome-stable --version
 ```
 
-## Install VcXsrv Windows X Server
+### Install VcXsrv Windows X Server
 
 You can run Google Chrome also inside a docker container (debian based) on Windows 10 using [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/).
 
@@ -75,7 +75,7 @@ Further details to install VcXsrv:
 
 - [Install an X-Server to display UI from the linux subsystem (WSL2)](https://docs.cypress.io/guides/getting-started/installing-cypress#Windows-Subsystem-for-Linux)
 
-## Run Google Chrome in docker using the X-Server running on docker host
+### Run Google Chrome in docker using the X-Server running on docker host
 
 ```bash
 google-chrome-stable --no-sandbox --display=host.docker.internal:0.0 --disable-dev-shm-usage
