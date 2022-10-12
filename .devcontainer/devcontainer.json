@@ -15,6 +15,12 @@
 		}
 	},
 
+	// Add here your mount points (https://containers.dev/implementors/json_reference/)
+	"mounts": [
+		// Share your ssh keys in readonly mode
+		// "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,readonly"
+	],
+
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
 		"python.defaultInterpreterPath": "/usr/local/bin/python",
