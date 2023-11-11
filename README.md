@@ -4,7 +4,7 @@ A sandbox to develop python projects based on [Selenium](https://www.selenium.de
 
 This project uses a docker image that includes all required resources such as:  
 
-- [Python 3.10](https://www.python.org/)
+- [Python 3.12](https://www.python.org/)
 - [Selenium for Python](https://pypi.org/project/selenium/)
 - [Webdriver Manager for Python](https://pypi.org/project/webdriver-manager/)
 - [Google Chrome](https://www.google.com/intl/it_it/chrome/)
@@ -20,7 +20,7 @@ You can test environment with the following commands:
 2. Run test.py script (from docker container)
 
     ```bash
-    python test.py # Run test.py script (open google chrome browser)
+    ./test.py # Run test.py script (open google chrome browser)
     exit # Exit from docker container
     ```
 
@@ -34,12 +34,19 @@ The project include the .devcontainer folder to automate the docker build and de
 The docker image can be manually built as follow:  
 
 ```bash
-cd .devcontainer
-docker build -t ricfio/python-selenium:3.10 .
+# make build
+docker build -t ricfio/python-selenium:3.12 .
 ```
 
 The project docker image was built as a customization from:  
-`mcr.microsoft.com/vscode/devcontainers/python:0-3.10-bullseye`
+`mcr.microsoft.com/vscode/devcontainers/python:0-3.12-bullseye`
+
+### Run a temporary docker container opening Google Chrome inside
+
+```bash
+# make run
+docker run -it --rm --net host -e DISPLAY=unix$(DISPLAY) ricfio/python-selenium:3.12 google-chrome-stable --no-sandbox
+```
 
 ### Install Python packages
 
